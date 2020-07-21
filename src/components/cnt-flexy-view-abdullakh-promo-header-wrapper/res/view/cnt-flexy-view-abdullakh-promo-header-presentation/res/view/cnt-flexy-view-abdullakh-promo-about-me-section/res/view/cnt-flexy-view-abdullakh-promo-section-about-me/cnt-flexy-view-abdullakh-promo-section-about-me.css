@@ -1,0 +1,56 @@
+.about_me_wrapper_inner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.giga_text_about{
+  font-size: 190px;
+  position: absolute;
+  opacity: .07;
+  z-index: 0;
+  font-weight: bold;
+  top: -10px;
+  left: 100px;
+  color: #4a4a4a;
+}
+
+.about_me_block_info_block{
+  text-align: left;
+  width: 70%;
+  color:  #404147;
+}
+
+.about_me_title h4{
+  margin-top: 20px;
+  margin-bottom: .2652050919em;
+  font-size: 1.414em;
+  line-height: 1.3260254597;
+}
+
+.about_me_subtitle h5 {
+  font-size: .75em;
+  font-weight: 400;
+  color: #4a4d4f;
+}
+
+.about_me_text{
+  margin-top: 20px;
+  font-size: .875em;
+  text-align: justify;
+  color: #5d6368;
+}
+
+.my_skills{
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  font-size: 64px;
+}
+
+.my_skills_icon{
+  display: flex;
+  align-items: flex-end;
+}

@@ -1,0 +1,50 @@
+.contact_form_innerBlock{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.giga_text_contact{
+  bottom: -30px;
+  right: -200px;
+  color: #fff;
+  font-size: 190px;
+  position: absolute;
+  opacity: .07;
+  z-index: 0;
+  font-weight: bold;
+}
+
+.contact_form_wrapper_inner{
+  width: 80%;
+}
+
+.contact_form_title{
+  color: #dadada;
+}
+
+.contact_form_subtitle p{
+  font-size: 12px;
+}
+
+.contact_form_label{
+  margin-top: 15px;
+}
+
+.contact_form_input_required input, .contact_form_input_required textarea{
+  display: block;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid silver;
+  padding: 8px 5px;
+  font-size: .875em;
+  border-radius: 0;
+  background: transparent;
+  color: silver;
+  transition: border-color .25s;
+}
+
+.contact_form_btn_block{
+  margin-top: 25px;
+}

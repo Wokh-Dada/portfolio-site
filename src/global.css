@@ -1,0 +1,57 @@
+*{
+
+}
+
+body{
+  background-color: #f3f3f3;
+  font-family: 'Roboto Slab', serif;
+}
+
+.modalOpen{
+  overflow: hidden;
+}
+
+a{
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+a:not([href]) {
+  text-decoration: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button{
+  cursor: pointer;
+  text-decoration: inherit;
+  color: inherit;
+  outline: inherit;
+}
+
+button:not(:disabled) {
+  cursor: pointer;
+  text-decoration: inherit;
+  color: inherit;
+  outline: inherit;
+}
+
+input{
+  outline: transparent;
+}
+
+@media (min-width: 576px) {
+
+}
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+}
+
+@media (min-width: 1200px) {
+
+}

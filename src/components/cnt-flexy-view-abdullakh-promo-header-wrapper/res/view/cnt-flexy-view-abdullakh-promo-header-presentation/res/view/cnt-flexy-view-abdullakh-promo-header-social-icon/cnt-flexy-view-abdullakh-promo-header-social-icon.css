@@ -1,0 +1,38 @@
+.icon_item {
+  display: block;
+  margin: 15px 0;
+  color: #b0b2c3;
+  font-size: 55px;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.icon_item:hover {
+  color: #fff;
+}
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (max-width: 1200px) {
+  .icon_item {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 576px) {
+  .icon_item {
+    display: inline-flex;
+    width: 30px;
+    height: 20px;
+    z-index: 60;
+    margin: 0 20px;
+    font-size: 42px;
+  }
+}
