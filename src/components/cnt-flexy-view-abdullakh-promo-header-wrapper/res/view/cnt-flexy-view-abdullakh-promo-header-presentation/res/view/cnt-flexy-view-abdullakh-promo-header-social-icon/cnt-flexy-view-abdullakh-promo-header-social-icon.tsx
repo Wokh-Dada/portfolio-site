@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from '@stencil/core';
 import {AbdullakhHeaderNavSocial} from "../cnt-flexy-view-abdullakh-promo-header-nav/interface/common.interface";
 
 @Component({
@@ -8,13 +8,19 @@ import {AbdullakhHeaderNavSocial} from "../cnt-flexy-view-abdullakh-promo-header
   scoped: true
 })
 export class CntFlexyViewAbdullakhHeaderPresentation implements ComponentInterface {
-  @Prop()icon: AbdullakhHeaderNavSocial;
+  @Prop() icon: AbdullakhHeaderNavSocial;
+
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnHeader: EventEmitter;
 
   render() {
     return (
-        <a href={this.icon.socialHref} target="_blank" class="icon_item" innerHTML={this.icon.social}>
+      <a href={this.icon.socialHref} target="_blank" class="icon_item" id="icon_item" innerHTML={this.icon.social}
+         onClick={() => this.clickOnHeader.emit(this.icon.socialHref)}>
 
-        </a>
+      </a>
     );
   }
 

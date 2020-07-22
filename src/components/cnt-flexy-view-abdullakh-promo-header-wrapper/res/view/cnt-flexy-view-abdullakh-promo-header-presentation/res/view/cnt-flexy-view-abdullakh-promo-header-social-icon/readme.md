@@ -12,6 +12,13 @@
 | `icon`   | --        |             | `AbdullakhHeaderNavSocial` | `undefined` |
 
 
+## Events
+
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnHeader` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

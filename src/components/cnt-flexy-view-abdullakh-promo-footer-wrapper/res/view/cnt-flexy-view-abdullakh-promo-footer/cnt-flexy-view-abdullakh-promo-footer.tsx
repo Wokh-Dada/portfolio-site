@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 import {AbdullakhFooter} from "./interface/common.interface";
 
 @Component({
@@ -13,13 +13,18 @@ export class CntFlexyViewAbdullakhPromoFooter implements ComponentInterface {
    * */
   @Prop() categories : AbdullakhFooter;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnFooter: EventEmitter;
+
   render() {
     return (
       <footer class="container-fluid footer">
         <div class="container">
           <div class="footer_nav_wrapper">
             <div class="footer_logo_wrapper">
-              <div class="footer_logo" innerHTML={this.categories.logoname}>
+              <div class="footer_logo" innerHTML={this.categories.logoname}  onClick={()=> this.clickOnFooter.emit(this.categories.logoname)}>
 
               </div>
             </div>
@@ -29,7 +34,7 @@ export class CntFlexyViewAbdullakhPromoFooter implements ComponentInterface {
               </div>
             </div>
 
-            <div class="footer_copyright">
+            <div class="footer_copyright" onClick={()=> this.clickOnFooter.emit(this.categories.copyright)}>
               {this.categories.copyright}
             </div>
           </div>

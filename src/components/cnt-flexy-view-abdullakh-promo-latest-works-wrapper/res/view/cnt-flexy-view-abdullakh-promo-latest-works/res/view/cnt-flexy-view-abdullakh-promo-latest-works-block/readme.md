@@ -12,6 +12,13 @@
 | `arr`    | --        | массив для вывода элементов TransitionCreateBot | `AbdullakhLatestWorksBlocks` | `undefined` |
 
 
+## Events
+
+| Event                | Description                  | Type               |
+| -------------------- | ---------------------------- | ------------------ |
+| `clickOnLatestWorks` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

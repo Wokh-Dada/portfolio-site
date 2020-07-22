@@ -4,14 +4,22 @@
   transition: all .3s ease;
 }
 
-.header_backg_black {
+#header_backg_black {
   background: #1c1d25;
   color: white !important;
 }
 
-.header_backg_white {
+#header_backg_white svg{
+  fill: white;
+}
+
+#header_backg_white {
   background: inherit;
   color: #4c4f65 !important;
+}
+
+#header_backg_white #buttonIcon{
+  fill: #4c4f65 !important;
 }
 
 .icons_block {

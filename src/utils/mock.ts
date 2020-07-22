@@ -9,19 +9,20 @@ export const header = {
       id: 1,
       btnText: 'Обо мне',
       btnSvg:
-        `<svg class="buttonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213">
+        `<svg class="buttonIcon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.213 476.213" fill="inherit">
            <path d="M405.606 167.5l-21.212 21.213 34.393 34.393H0v30h418.787L384.394 287.5l21.212 21.213 70.607-70.607"></path>
          </svg>`,
-      btnHref: '#',
+      btnHref: '#contact_form',
       btnComplited: false,
     },
   ],
   headNav: {
     id: 1,
     logoname:
-      `<svg  xmlns="http://www.w3.org/2000/svg" id="my-svg" width="100%" height="100%" viewBox="0 0 256 256">
-            <path fill="#FFF" d="M53.2 145.1l81.9-71.7h-34.3L19 145.1l102.8 90h34.3l-102.9-90"></path>
-            <g fill="#FFF">
+      `<span>
+          <svg  xmlns="http://www.w3.org/2000/svg" id="my-svg" width="100%" height="100%" viewBox="0 0 256 256">
+            <path fill="inherit" d="M53.2 145.1l81.9-71.7h-34.3L19 145.1l102.8 90h34.3l-102.9-90"></path>
+            <g fill="inherit">
               <path
                  d="M145.3 145.1l36-31.6s.8-.7 1.1-1l2.4-2.4c8.5-10.3 13.3-23.3 13.3-36.7 0-31.8-25.8-57.7-57.6-57.7l-111.1.1L7.2 38.6l111.4-.1h21.9c19.2 0 34.8 15.6 34.8 34.8 0 8.2-2.7 15.8-8 22.2-1 1.3-8.3 7.3-8.3 7.3l-12.4 10.6-35.6 31.7 102.9 90h34.3l-102.9-90zm33.4-31.7h.2-.2z"></path>
               <path
@@ -33,20 +34,24 @@ export const header = {
                    d="M253.9 237.3H213l-.5-.4-104.8-91.7 1.8-1.6 35.6-31.7 12.5-10.6c4-3.3 7.5-6.4 8-7 4.9-5.9 7.5-13.1 7.5-20.8 0-18-14.7-32.7-32.7-32.7H2l26.4-27.2 117.2-.1-.2.2c30.6 2.6 54.8 28.5 54.8 59.6 0 13.7-4.9 27.3-13.8 38.1-.5.6-2.3 2.4-2.6 2.7-.3.3-1.2 1-1.2 1l-.5.4-33.6 29.5 105.4 92.3zm-39.2-4.3h27.7L142 145.1l33.6-29.5h-3.1l4.7-3.8.1-2.6 1.8 2 1.4.1c.2-.1.3-.3.4-.4.4-.3 1.9-1.9 2.2-2.2 8.3-10 12.8-22.6 12.8-35.3 0-30.6-24.9-55.5-55.5-55.5H30.3l-18 18.5 108.4-.1h19.7c20.4 0 37 16.6 37 37 0 8.7-2.9 16.8-8.4 23.5-.7.9-3.5 3.4-8.5 7.5L148 115.1l-33.7 30L214.7 233z"></path>
               </g>
              </g>
-        </svg>`,
+            </svg>
+        </span>`,
     mobileBar: `<i class="fas fa-bars"></i>`,
     nav: [
       {
         id: 1,
-        link: 'Моё портфолио'
+        link: 'Моё портфолио',
+        linkHref: '#latest_works'
       },
       {
         id: 2,
-        link: 'Обо мне/Связаться'
+        link: 'Обо мне/Связаться',
+        linkHref: '#contact_form'
       },
       {
         id: 3,
-        link: 'Эксперементы'
+        link: 'Эксперементы',
+        linkHref: '#experiment_works'
       },
     ],
     iconTheme: `<i class="fas fa-adjust"></i>`
@@ -154,7 +159,7 @@ export const latestWork = {
     {
       id: 1,
       number: '01',
-      img: 'https://cdn.dribbble.com/users/124454/screenshots/10138254/media/395662e68da36da89a1c966fea881332.png',
+      img: 'wibbitz.png',
       title: 'Project Wibbitz',
       subtitle: 'Wibbitz - Ре сурсный Центр',
       btn: [
@@ -173,7 +178,7 @@ export const latestWork = {
     {
       id: 2,
       number: '02',
-      img: 'https://cloclo20.cloud.mail.ru/inline/company%20cards.png?etag=32CBD0A231AA8237347C5B6BFF5A66C59247CCAC&x-email=a.gezikhanov%40mail.ru',
+      img: 'companyCards.png',
       title: 'Company Cards',
       subtitle: 'Revolut Business',
       btn: [
@@ -191,7 +196,7 @@ export const latestWork = {
     {
       id: 3,
       number: '03',
-      img: 'https://cloclo20.cloud.mail.ru/inline/%D1%85%D0%BE%D1%87%D1%83-%D0%B1%D0%BE%D1%82%D0%B0.png?etag=8F668D2A7F78D2CD9E808A77FBD63CEE985747FD&x-email=a.gezikhanov%40mail.ru',
+      img: 'wantBot.png',
       title: 'Хочу бота',
       subtitle: 'Разработать чат-бот',
       btn: [

@@ -27,8 +27,14 @@ export class CntFlexyViewAbdullakhFooter implements ComponentInterface {
 
   render() {
     return (
-      <cnt-flexy-view-abdullakh-promo-footer categories={this.categories}/>
+      <cnt-flexy-view-abdullakh-promo-footer categories={this.categories} onClickOnFooter={(event)=> this.clickOnFooter(event)}/>
     );
   }
 
+  /**
+   * клик по элементам компонента
+   */
+  public clickOnFooter({detail}) {
+    return console.log("clickOnFooter:", detail);
+  }
 }

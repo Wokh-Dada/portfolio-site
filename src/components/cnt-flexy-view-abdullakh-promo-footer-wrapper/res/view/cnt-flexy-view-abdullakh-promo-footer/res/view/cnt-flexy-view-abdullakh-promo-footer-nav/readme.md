@@ -12,6 +12,13 @@
 | `arr`    | `arr`     | объект с массивом меню и string для подкомпонентов | `any` | `undefined` |
 
 
+## Events
+
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnFooter` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

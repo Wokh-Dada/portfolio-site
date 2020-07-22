@@ -14,9 +14,10 @@
 
 ## Events
 
-| Event       | Description                 | Type               |
-| ----------- | --------------------------- | ------------------ |
-| `closeForm` | close модального окна формы | `CustomEvent<any>` |
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnHeader` | клик по элементам компонента | `CustomEvent<any>` |
+| `closeForm`     | close модального окна формы  | `CustomEvent<any>` |
 
 
 ## Dependencies

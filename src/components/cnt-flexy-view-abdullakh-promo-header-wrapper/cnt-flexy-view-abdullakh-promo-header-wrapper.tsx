@@ -28,9 +28,15 @@ export class CntFlexyViewAbdullakhPromoHeaderWrapper implements ComponentInterfa
   render() {
     return (
       <div>
-        <cnt-flexy-view-abdullakh-promo-header-presentation categories={this.categories}/>
+        <cnt-flexy-view-abdullakh-promo-header-presentation categories={this.categories} onClickOnHeader={(event)=> this.clickOnHeader(event)}/>
       </div>
     );
   }
 
+  /**
+   * клик по элементам компонента
+   */
+  public clickOnHeader({detail}) {
+    return console.log("clickOnHeader:", detail);
+  }
 }

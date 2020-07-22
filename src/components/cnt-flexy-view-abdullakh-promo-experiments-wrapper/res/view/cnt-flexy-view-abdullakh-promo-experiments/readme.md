@@ -14,9 +14,9 @@
 
 ## Events
 
-| Event                | Description                                      | Type               |
-| -------------------- | ------------------------------------------------ | ------------------ |
-| `clickOnExperiments` | клик по элементам компонента TransitionCreateBot | `CustomEvent<any>` |
+| Event                | Description                  | Type               |
+| -------------------- | ---------------------------- | ------------------ |
+| `clickOnExperiments` | клик по элементам компонента | `CustomEvent<any>` |
 
 
 ## Dependencies

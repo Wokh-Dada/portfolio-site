@@ -18,11 +18,17 @@ export class CntFlexyViewAbdullakhPromoFormClose implements ComponentInterface {
    */
   @Event() opMenu: EventEmitter;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnHeader: EventEmitter;
+
   render() {
     return (
         <div class="close" onClick={() => {
           this.closeForm.emit();
           this.opMenu.emit();
+          this.clickOnHeader.emit(event);
         }}>
           <span>
 

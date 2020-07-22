@@ -12,6 +12,13 @@
 | `categories` | --        | объект с массивом меню и string для подкомпонентов | `AbdullakhFooter` | `undefined` |
 
 
+## Events
+
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnFooter` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

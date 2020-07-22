@@ -29,7 +29,7 @@ export class CntFlexyViewAbdullakhPromoAnimateBtn implements ComponentInterface 
             }
 
           </button>
-          <div class="buttonIcon" innerHTML={this.arr.btnSvg}>
+          <div class="buttonIcon" id="buttonIcon" innerHTML={this.arr.btnSvg}>
 
           </div>
         </div>

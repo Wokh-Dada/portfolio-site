@@ -281,6 +281,10 @@ declare namespace LocalJSX {
          */
         "about"?: AbdullakhAboutMeSection;
         /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
+        /**
           * Вызов модального окна формы
          */
         "onCloseForm"?: (event: CustomEvent<any>) => void;
@@ -294,7 +298,7 @@ declare namespace LocalJSX {
     }
     interface CntFlexyViewAbdullakhPromoExperiments {
         /**
-          * клик по элементам компонента TransitionCreateBot
+          * клик по элементам компонента
          */
         "onClickOnExperiments"?: (event: CustomEvent<any>) => void;
         /**
@@ -327,12 +331,20 @@ declare namespace LocalJSX {
           * объект с массивом меню и string для подкомпонентов
          */
         "categories"?: AbdullakhFooter;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnFooter"?: (event: CustomEvent<any>) => void;
     }
     interface CntFlexyViewAbdullakhPromoFooterNav {
         /**
           * объект с массивом меню и string для подкомпонентов
          */
         "arr"?: any;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnFooter"?: (event: CustomEvent<any>) => void;
     }
     interface CntFlexyViewAbdullakhPromoFooterWrapper1_01 {
         /**
@@ -345,6 +357,10 @@ declare namespace LocalJSX {
         "pathToAssets"?: string;
     }
     interface CntFlexyViewAbdullakhPromoFormClose {
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
         /**
           * Закрытие модального окна формы
          */
@@ -360,6 +376,18 @@ declare namespace LocalJSX {
          */
         "headNav"?: AbdullakhHeaderNav;
         /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
+        /**
+          * клик по элементам компонента
+         */
+        "onHeaderTheme"?: (event: CustomEvent<any>) => void;
+        /**
+          * клик по элементам компонента
+         */
+        "onOpenForm"?: (event: CustomEvent<any>) => void;
+        /**
           * объект с массивом меню и string для подкомпонентов
          */
         "social"?: AbdullakhHeaderNavSocial;
@@ -369,9 +397,17 @@ declare namespace LocalJSX {
           * объект с массивом меню и string для подкомпонентов
          */
         "categories"?: AbdullakhHeaderPresentation;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
     }
     interface CntFlexyViewAbdullakhPromoHeaderSocialIcon {
         "icon"?: AbdullakhHeaderNavSocial;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
     }
     interface CntFlexyViewAbdullakhPromoHeaderWrapper1_01 {
         /**
@@ -385,6 +421,10 @@ declare namespace LocalJSX {
     }
     interface CntFlexyViewAbdullakhPromoLatestWorks {
         /**
+          * клик по элементам компонента
+         */
+        "onClickOnLatestWorks"?: (event: CustomEvent<any>) => void;
+        /**
           * массив для вывода элементов LatestWorks
          */
         "payload"?: AbdullakhLatestWorks;
@@ -394,6 +434,10 @@ declare namespace LocalJSX {
           * массив для вывода элементов TransitionCreateBot
          */
         "arr"?: AbdullakhLatestWorksBlocks;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnLatestWorks"?: (event: CustomEvent<any>) => void;
     }
     interface CntFlexyViewAbdullakhPromoLatestWorksWrapper1_01 {
         /**
@@ -411,6 +455,10 @@ declare namespace LocalJSX {
          */
         "about"?: AbdullakhSectionAboutMe;
         /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
+        /**
           * close модального окна формы
          */
         "onCloseForm"?: (event: CustomEvent<any>) => void;
@@ -420,6 +468,10 @@ declare namespace LocalJSX {
           * объект с массивом меню и string для подкомпонентов
          */
         "contactForm"?: AbdullakhSectionForm;
+        /**
+          * клик по элементам компонента
+         */
+        "onClickOnHeader"?: (event: CustomEvent<any>) => void;
         /**
           * close модального окна формы
          */

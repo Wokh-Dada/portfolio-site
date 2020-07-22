@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from '@stencil/core';
 import {AbdullakhLatestWorks} from "./interface/common.interface";
 
 @Component({
@@ -13,17 +13,22 @@ export class CntFlexyViewAbdullakhPromoLatestWorks implements ComponentInterface
    * */
   @Prop() payload: AbdullakhLatestWorks;
 
+    /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnLatestWorks: EventEmitter;
+
   render() {
     return (
       <section class="container latest_works_wrapper" id="latest_works">
         <div class="latest_works_title_block">
           <div class="latest_works_subtitle">
-            <h4>
+            <h4 onClick={()=> this.clickOnLatestWorks.emit(this.payload.subtitle)}>
               {this.payload.subtitle}
             </h4>
           </div>
           <div class="latest_works_title">
-            <h2>
+            <h2 onClick={()=> this.clickOnLatestWorks.emit(this.payload.title)}>
               {this.payload.title}
             </h2>
           </div>

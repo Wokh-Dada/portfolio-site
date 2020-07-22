@@ -14,13 +14,13 @@ export class CntFlexyViewAbdullakhPromoExperiments implements ComponentInterface
   @Prop() payload: AbdullakhExperiments;
 
   /**
-   * клик по элементам компонента TransitionCreateBot
+   * клик по элементам компонента
    * */
   @Event() clickOnExperiments: EventEmitter;
 
   render() {
     return (
-      <section class="container-fluid p-0 m-0">
+      <section class="container-fluid p-0 m-0" id="experiment_works">
         <div class="experiment_works_wrapper">
           <div class="experiment_works_title_wrapper">
             <div class="experiment_works_subtitle" onClick={()=> this.clickOnExperiments.emit(this.payload.subtitle)}>

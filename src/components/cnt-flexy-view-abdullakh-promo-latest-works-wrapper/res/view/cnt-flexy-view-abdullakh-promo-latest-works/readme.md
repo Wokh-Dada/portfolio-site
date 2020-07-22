@@ -12,6 +12,13 @@
 | `payload` | --        | массив для вывода элементов LatestWorks | `AbdullakhLatestWorks` | `undefined` |
 
 
+## Events
+
+| Event                | Description                  | Type               |
+| -------------------- | ---------------------------- | ------------------ |
+| `clickOnLatestWorks` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

@@ -13,6 +13,13 @@
 | `social`  | --        | объект с массивом меню и string для подкомпонентов | `AbdullakhHeaderNavSocial` | `undefined` |
 
 
+## Events
+
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnHeader` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

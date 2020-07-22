@@ -7,9 +7,26 @@
   width: 100%;
 }
 
+#navColor{
+  color: #4c4f65!important;
+}
+
+#navColor .logo{
+  fill: #4c4f65!important;
+}
+
+#navColor a{
+  color: #4c4f65!important;
+}
+
+#navColor .svg_block{
+  color: #4c4f65!important;
+}
+
 .logo {
   width: 60px;
   height: 86px;
+  fill: white;
 }
 
 .nav_menu {

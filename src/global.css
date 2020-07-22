@@ -41,6 +41,19 @@ input{
   outline: transparent;
 }
 
+#header_backg_white #buttonIcon{
+  fill: #4c4f65 !important;
+}
+
+#header_backg_white #icon_item{
+  color: #4c4f65;
+}
+
+#header_backg_white #icon_item:hover{
+  color: black;
+}
+
+
 @media (min-width: 576px) {
 
 }

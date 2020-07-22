@@ -18,9 +18,14 @@ export class CntFlexyViewAbdullakhPromoAboutMeSection implements ComponentInterf
    * */
   @Event() closeForm: EventEmitter;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnHeader: EventEmitter;
+
   render() {
     return (
-      <section class="container contact_form_outerBlock">
+      <section class="container contact_form_outerBlock" id="contact_form">
         <div class="contact_form">
           <cnt-flexy-view-abdullakh-promo-form-close/>
           <div class="contact_form_wrapper">

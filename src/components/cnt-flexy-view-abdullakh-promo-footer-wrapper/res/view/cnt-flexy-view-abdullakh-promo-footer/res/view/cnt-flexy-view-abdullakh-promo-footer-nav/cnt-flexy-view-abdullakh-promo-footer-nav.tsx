@@ -1,4 +1,4 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, Event, EventEmitter, h, Prop} from '@stencil/core';
 
 @Component({
   tag: 'cnt-flexy-view-abdullakh-promo-footer-nav',
@@ -12,10 +12,15 @@ export class cntFlexyViewAbdullakhPromoFooterNav implements ComponentInterface {
    * */
   @Prop() arr: any;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnFooter: EventEmitter;
+
   render() {
     return (
       <div class="footer_link">
-        <a href={this.arr.socialHref}>
+        <a href={this.arr.socialHref} onClick={()=> this.clickOnFooter.emit(this.arr)}>
           {this.arr.social}
         </a>
       </div>

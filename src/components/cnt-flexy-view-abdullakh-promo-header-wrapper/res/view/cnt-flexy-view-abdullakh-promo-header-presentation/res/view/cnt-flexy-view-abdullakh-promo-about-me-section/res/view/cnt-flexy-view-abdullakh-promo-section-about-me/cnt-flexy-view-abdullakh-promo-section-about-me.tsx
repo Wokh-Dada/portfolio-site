@@ -18,25 +18,30 @@ export class CntFlexyViewAbdullakhPromoSectionAboutMe implements ComponentInterf
    * */
   @Event() closeForm: EventEmitter;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnHeader: EventEmitter;
+
   render() {
     return (
       <div class="about_me_wrapper_inner">
-        <div class="giga_text_about">
+        <div class="giga_text_about" onClick={()=> this.clickOnHeader.emit(this.about.gigaText)}>
           {this.about.gigaText}
         </div>
         <div class="about_me_block_info_block">
           <div class="about_me_title">
-            <h4>
+            <h4 onClick={()=> this.clickOnHeader.emit(this.about.aboutMeTitle)}>
               {this.about.aboutMeTitle}
             </h4>
           </div>
           <div class="about_me_subtitle">
-            <h5>
+            <h5 onClick={()=> this.clickOnHeader.emit(this.about.aboutMeSubtitle)}>
               {this.about.aboutMeSubtitle}
             </h5>
           </div>
           <div class="about_me_text">
-            <p innerHTML={this.about.aboutMeInfo}>
+            <p innerHTML={this.about.aboutMeInfo} onClick={()=> this.clickOnHeader.emit(this.about.aboutMeInfo)}>
 
             </p>
           </div>

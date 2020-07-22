@@ -11,7 +11,7 @@ export class MyComponent {
    * временный префикс ссылки для картинок
    */
   public testPathToAssets =
-    "";
+    "https://cdn.ramman.net/flexy-view/abdullakh/promo/1.01/assets/";
 
   render() {
     return (

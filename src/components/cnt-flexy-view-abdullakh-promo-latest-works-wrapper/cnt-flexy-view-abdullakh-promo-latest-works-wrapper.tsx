@@ -27,7 +27,14 @@ export class CntFlexyViewAbdullakhPromoLatestWorksWrapper implements ComponentIn
 
   render() {
     return (
-      <cnt-flexy-view-abdullakh-promo-latest-works payload={this.payload}/>
+      <cnt-flexy-view-abdullakh-promo-latest-works payload={this.payload} onClickOnLatestWorks={(event)=> this.clickOnLatestWorks(event)}/>
     );
+  }
+
+  /**
+   * клик по элементам компонента
+   */
+  public clickOnLatestWorks({detail}) {
+    return console.log("clickOnLatestWorks:", detail);
   }
 }

@@ -1,5 +1,6 @@
-import {Component, ComponentInterface, h, Prop} from '@stencil/core';
+import {Component, ComponentInterface, EventEmitter, h, Prop, Event} from '@stencil/core';
 import {AbdullakhLatestWorksBlocks} from "./interface/common.interface";
+import {StorageAbdullakhPromo} from "../../../../../../../../utils/utils";
 
 @Component({
   tag: 'cnt-flexy-view-abdullakh-promo-latest-works-block',
@@ -13,35 +14,41 @@ export class CntFlexyViewAbdullakhPromoLatestWorksBlock implements ComponentInte
    * */
   @Prop() arr: AbdullakhLatestWorksBlocks;
 
+  /**
+   * клик по элементам компонента
+   * */
+  @Event() clickOnLatestWorks: EventEmitter;
+
   render() {
     return (
       <div class="latest_works_block">
-        <a href="" style={{backgroundImage: "url(" + this.arr.img + ")"}}>
+        <a href="" style={{backgroundImage: "url(" + StorageAbdullakhPromo.prefix + this.arr.img + ")"}}
+           onClick={() => this.clickOnLatestWorks.emit(this.arr.img)}>
           <div class="animate_latest_work wow animate__animated animate__fadeOutRight">
 
           </div>
           <div class={this.numberPosition(this.arr.id)}>
-            <div>
+            <div onClick={() => this.clickOnLatestWorks.emit(this.arr.number)}>
               {this.arr.number}
             </div>
             <div class="latest_works_inner_number_mask_wrapper">
-              <div class="latest_works_inner_number_mask">
+              <div class="latest_works_inner_number_mask" onClick={() => this.clickOnLatestWorks.emit(this.arr.number)}>
                 {this.arr.number}
               </div>
             </div>
           </div>
           <div class={this.worksContentPosition(this.arr.id)}>
             <div class="latest_works_content_title">
-              <h3>
+              <h3 onClick={() => this.clickOnLatestWorks.emit(this.arr.title)}>
                 {this.arr.title}
               </h3>
             </div>
             <div class="latest_works_content_subtitle">
-              <h5>
+              <h5 onClick={() => this.clickOnLatestWorks.emit(this.arr.subtitle)}>
                 {this.arr.subtitle}
               </h5>
             </div>
-            <div class="latest_works_content_btn_block">
+            <div class="latest_works_content_btn_block" onClick={() => this.clickOnLatestWorks.emit(event)}>
               {
                 this.arr.btn.map((item) => <cnt-flexy-view-abdullakh-promo-animate-btn arr={item}/>)
               }

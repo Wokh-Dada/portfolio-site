@@ -12,6 +12,13 @@
 | `categories` | --        | объект с массивом меню и string для подкомпонентов | `AbdullakhHeaderPresentation` | `undefined` |
 
 
+## Events
+
+| Event           | Description                  | Type               |
+| --------------- | ---------------------------- | ------------------ |
+| `clickOnHeader` | клик по элементам компонента | `CustomEvent<any>` |
+
+
 ## Dependencies
 
 ### Used by

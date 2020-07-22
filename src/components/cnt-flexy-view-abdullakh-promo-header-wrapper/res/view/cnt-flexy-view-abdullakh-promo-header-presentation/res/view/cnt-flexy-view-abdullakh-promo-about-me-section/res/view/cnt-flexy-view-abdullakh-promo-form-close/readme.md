@@ -7,10 +7,11 @@
 
 ## Events
 
-| Event       | Description                    | Type               |
-| ----------- | ------------------------------ | ------------------ |
-| `closeForm` | Закрытие модального окна формы | `CustomEvent<any>` |
-| `opMenu`    | Закрытие модального окна формы | `CustomEvent<any>` |
+| Event           | Description                    | Type               |
+| --------------- | ------------------------------ | ------------------ |
+| `clickOnHeader` | клик по элементам компонента   | `CustomEvent<any>` |
+| `closeForm`     | Закрытие модального окна формы | `CustomEvent<any>` |
+| `opMenu`        | Закрытие модального окна формы | `CustomEvent<any>` |
 
 
 ## Dependencies
