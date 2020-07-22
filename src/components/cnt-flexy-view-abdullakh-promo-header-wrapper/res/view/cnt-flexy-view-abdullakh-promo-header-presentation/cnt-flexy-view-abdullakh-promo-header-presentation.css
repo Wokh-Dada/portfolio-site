@@ -13,9 +13,13 @@
   fill: white;
 }
 
-#header_backg_white {
+#header_backg_white, #header_backg_white .link_next_text {
   background: inherit;
   color: #4c4f65 !important;
+}
+
+#header_backg_white .arrow-down, #header_backg_white .arrow-down::before, #header_backg_white .arrow-down::after{
+  background: #4c4f65!important;
 }
 
 #header_backg_white #buttonIcon{
