@@ -66,9 +66,7 @@
   fill: white;
 }
 
-@media (min-width: 576px) {
 
-}
 
 @media (min-width: 768px) {
 
@@ -82,4 +80,12 @@
 
 @media (max-width: 1200px) {
 
+}
+
+@media (max-width: 576px) {
+  .author_btn {
+    width: 120px;
+    min-height: 40px;
+    font-size: 11px;
+  }
 }

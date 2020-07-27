@@ -22,7 +22,7 @@ export class CntFlexyViewAbdullakhPromoLatestWorksBlock implements ComponentInte
   render() {
     return (
       <div class="latest_works_block">
-        <a href="" style={{backgroundImage: "url(" + StorageAbdullakhPromo.prefix + this.arr.img + ")"}}
+        <a style={{backgroundImage: "url(" + StorageAbdullakhPromo.prefix + this.arr.img + ")"}}
            onClick={() => this.clickOnLatestWorks.emit(this.arr.img)}>
           <div class="animate_latest_work wow animate__animated animate__fadeOutRight">
 

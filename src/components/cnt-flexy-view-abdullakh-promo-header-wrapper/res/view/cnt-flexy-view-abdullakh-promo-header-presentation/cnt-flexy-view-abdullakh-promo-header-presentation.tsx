@@ -31,7 +31,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   render() {
     return (
       <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el}>
-        <div class="logoBack" innerHTML={this.categories.logoBack}>
+        <div  class="logoBack" innerHTML={this.categories.logoBack}>
         {/*logo background*/}
         </div>
         <div class="icons_block">

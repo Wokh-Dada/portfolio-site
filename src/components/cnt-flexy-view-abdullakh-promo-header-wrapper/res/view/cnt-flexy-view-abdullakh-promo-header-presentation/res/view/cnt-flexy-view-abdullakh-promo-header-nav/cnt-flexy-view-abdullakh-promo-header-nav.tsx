@@ -48,13 +48,14 @@ export class CntFlexyViewAbdullakhPromoHeaderNav implements ComponentInterface {
     return (
       <nav class="container nav">
         <div class="nav_menu_block" ref={(el) => this.class = el}>
-          <div class="logo" innerHTML={this.headNav.logoname}
-
+          <div class="logo"
                onClick={() => {
                  this.clickOnHeader.emit(this.headNav.logoname);
                }}
           >
-            {/*логотип*/}
+            <a href="/" innerHTML={this.headNav.logoname}>
+              {/*логотип*/}
+            </a>
           </div>
           <div class="nav_menu">
             {
