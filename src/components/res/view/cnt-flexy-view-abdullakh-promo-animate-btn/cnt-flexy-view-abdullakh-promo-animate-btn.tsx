@@ -19,7 +19,7 @@ export class CntFlexyViewAbdullakhPromoAnimateBtn implements ComponentInterface 
     return (
       <div class="author_btn_block">
         <div class="author_btn_wrapper">
-          <button class="author_btn" onClick={() => this.openForm.emit()}>
+          <div class="btn author_btn" onClick={() => this.openForm.emit()}>
             {
               this.arr.btnComplited ?
                 <a href={this.arr.btnHref} target="_blank">
@@ -28,7 +28,7 @@ export class CntFlexyViewAbdullakhPromoAnimateBtn implements ComponentInterface 
                 this.arr.btnText
             }
 
-          </button>
+          </div>
           <div class="buttonIcon" id="buttonIcon" innerHTML={this.arr.btnSvg}>
 
           </div>

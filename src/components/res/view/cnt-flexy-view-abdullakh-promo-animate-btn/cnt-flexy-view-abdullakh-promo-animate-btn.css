@@ -4,6 +4,9 @@
 
 .author_btn {
   position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   width: 151px;
   min-height: 45px;
   font-weight: 600;
@@ -14,7 +17,7 @@
   overflow: hidden;
   white-space: nowrap;
   text-align: center;
-  vertical-align: middle;
+  /*vertical-align: middle;*/
   color: white;
 }
 

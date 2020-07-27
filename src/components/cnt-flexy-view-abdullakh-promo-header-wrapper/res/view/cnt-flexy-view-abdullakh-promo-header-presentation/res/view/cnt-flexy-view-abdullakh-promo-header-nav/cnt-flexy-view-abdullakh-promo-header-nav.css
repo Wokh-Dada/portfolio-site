@@ -4,11 +4,17 @@
 
 .nav_menu_block {
   display: flex;
+  height: 70px;
   width: 100%;
 }
 
 #navColor{
   color: #4c4f65!important;
+}
+
+.logo{
+  transform: scale(0.25);
+  position: absolute;
 }
 
 #navColor .logo{
@@ -23,11 +29,11 @@
   color: #4c4f65!important;
 }
 
-.logo {
-  width: 60px;
-  height: 86px;
-  fill: white;
-}
+/*.logo {*/
+/*  width: 60px;*/
+/*  height: 86px;*/
+/*  fill: white;*/
+/*}*/
 
 .nav_menu {
   display: flex;

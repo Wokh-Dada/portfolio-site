@@ -52,7 +52,6 @@ export class CntFlexyViewAbdullakhPromoLatestWorksBlock implements ComponentInte
               {
                 this.arr.btn.map((item) => <cnt-flexy-view-abdullakh-promo-animate-btn arr={item}/>)
               }
-
             </div>
           </div>
         </a>

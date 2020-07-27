@@ -8,6 +8,7 @@ export interface AbdullakhHeaderPresentation {
   authorDevelop: string;
   work: string;
   workHref: string;
+  logoBack: any;
   btn: any;
   headNav: any;
   socialIcon: any;

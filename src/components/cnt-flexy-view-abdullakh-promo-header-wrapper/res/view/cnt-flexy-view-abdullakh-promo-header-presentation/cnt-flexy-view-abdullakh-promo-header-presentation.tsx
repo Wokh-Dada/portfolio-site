@@ -31,6 +31,9 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   render() {
     return (
       <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el}>
+        <div class="logoBack" innerHTML={this.categories.logoBack}>
+        {/*logo background*/}
+        </div>
         <div class="icons_block">
           <Social arr={this.categories.socialIcon}/>
         </div>
@@ -85,7 +88,6 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
             {this.categories.work}
           </div>
           <span class="arrow-down">
-
           </span>
         </a>
       </header>
@@ -115,7 +117,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
     if (this.headClass.id === "header_backg_black") {
       return (
         this.headClass.id = "header_backg_white",
-        x
+          x
       )
     } else {
       return this.headClass.id = "header_backg_black",
