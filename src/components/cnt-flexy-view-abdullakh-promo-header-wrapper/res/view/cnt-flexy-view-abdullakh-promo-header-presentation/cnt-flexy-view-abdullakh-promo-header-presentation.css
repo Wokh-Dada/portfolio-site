@@ -2,9 +2,26 @@
   position: relative;
   height: 100vh;
   transition: all .3s ease;
+  overflow: hidden;
 }
 
-.logoBack{
+.svgMouseEffect {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.svgGoLeft, .svgGoRight {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.svgGoLeft span, .svgGoRight span {
+  position: absolute;
+}
+
+.logoBack {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -18,11 +35,11 @@
   color: white !important;
 }
 
-#header_backg_white{
+#header_backg_white {
   background-color: #ebebeb;
 }
 
-#header_backg_white svg{
+#header_backg_white svg {
   fill: white;
 }
 
@@ -30,11 +47,11 @@
   color: #4c4f65 !important;
 }
 
-#header_backg_white .arrow-down, #header_backg_white .arrow-down::before, #header_backg_white .arrow-down::after{
-  background: #4c4f65!important;
+#header_backg_white .arrow-down, #header_backg_white .arrow-down::before, #header_backg_white .arrow-down::after {
+  background: #4c4f65 !important;
 }
 
-#header_backg_white #buttonIcon{
+#header_backg_white #buttonIcon {
   fill: #4c4f65 !important;
 }
 
@@ -166,10 +183,10 @@
 }
 
 @keyframes animationHead {
-  0%{
+  0% {
 
   }
-  50%{
+  50% {
     transform: translateX(105%);
   }
   100% {
@@ -208,7 +225,7 @@
     padding: 0 15px;
   }
 
-  .icons_block{
+  .icons_block {
     display: none;
   }
 }

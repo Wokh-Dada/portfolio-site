@@ -83,6 +83,7 @@
   transition: transform .4s cubic-bezier(.694, .048, .335, 1) .15s;
   z-index: 101;
   animation-fill-mode: both;
+  animation-duration: 0.65s;
 }
 
 .latest_works_block a {

@@ -38,7 +38,7 @@ button:not(:disabled) {
 }
 
 input{
-  outline: transparent;
+  outline: none;
 }
 
 #header_backg_white #buttonIcon{
