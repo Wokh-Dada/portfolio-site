@@ -1,6 +1,5 @@
 import {Component, ComponentInterface, Event, EventEmitter, h, Prop, State} from '@stencil/core';
 import {AbdullakhHeaderPresentation} from "./interface/common.interface";
-import {StorageAbdullakhPromo} from "../../../../../utils/utils";
 
 @Component({
   tag: 'cnt-flexy-view-abdullakh-promo-header-presentation',
@@ -29,11 +28,22 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
    * */
   headClass: HTMLElement;
 
+  /**
+   * переменная для observe функции скрола
+   * */
+  figureLeft: HTMLElement;
+
+  /**
+   * переменная для observe функции скрола
+   * */
+  figureRight: HTMLElement;
+
   render() {
+
     return (
       <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el}>
         <div class="svgMouseEffect">
-          <div class="svgGoLeft">
+          <div class="svgGoLeft" ref={(el) => this.figureLeft = el}>
             {/**/}
             <span style={{left: '44%', top: '18%', transform: 'rotate(180deg)'}} class="yellowTriangle">
               <svg id="triangle" width="25px" height="25px">
@@ -127,7 +137,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
             </span>
             {/*  */}
           </div>
-          <div class="svgGoRight">
+          <div class="svgGoRight" ref={(el) => this.figureRight = el}>
             {/**/}
             <span style={{left: '98%', top: '20%', transform: 'rotate(45deg)'}} class="AquaTriangle">
               <svg id="triangle" width="25px" height="25px">
@@ -232,6 +242,20 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
         </a>
       </header>
     );
+  }
+
+  componentDidLoad() {
+    this.headClass.addEventListener('mousemove', StartMatrix);
+
+    function StartMatrix(event) {
+      const header = document.querySelector('header');
+      const svgGoLeft = this.querySelector('.svgGoLeft');
+      const svgGoRight = this.querySelector('.svgGoRight');
+      const halfHeight = header.clientHeight / 2;
+      const halfWidth = header.clientWidth / 2;
+      svgGoLeft.style.transform = 'matrix(-1, 0, 0, -1,  ' + -(event.offsetY - halfHeight) / 20 + ',  '+ (event.offsetX - halfWidth) / 20 + ')';
+      svgGoRight.style.transform = 'matrix(-1, 0, 0, -1,  ' + (event.offsetY - halfHeight) / 20 + ',  '+ -(event.offsetX - halfWidth) / 20 + ')';
+    }
   }
 
   /**
