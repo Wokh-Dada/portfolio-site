@@ -175,15 +175,15 @@
 .link_go_to_next_block:hover .arrow-down::before {
   height: 2px;
   top: -3px;
+  -webkit-transform: rotate(-git40deg);
   transform: rotate(-40deg);
-  -webkit-transform: rotate(40deg);
 }
 
 .link_go_to_next_block:hover .arrow-down::after {
   height: 2px;
   top: 3px;
-  transform: rotate(40deg);
   -webkit-transform: rotate(40deg);
+  transform: rotate(40deg);
 }
 
 @keyframes animationHead {
@@ -191,8 +191,8 @@
 
   }
   50% {
-    transform: translateX(105%);
     -webkit-transform: translateX(105%);
+    transform: translateX(105%);
   }
   100% {
     position: initial;
