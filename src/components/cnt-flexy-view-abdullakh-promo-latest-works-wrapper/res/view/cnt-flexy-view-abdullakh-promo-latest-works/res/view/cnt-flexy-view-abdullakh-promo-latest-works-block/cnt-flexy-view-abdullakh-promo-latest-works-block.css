@@ -241,6 +241,20 @@
     height: 340px;
   }
 
+  .latest_works_number_mask{
+    font-size: 5rem;
+  }
+
+  .number_mask_position_right{
+    top: -10px;
+    right: -150px;
+  }
+
+  .number_mask_position_left{
+    left: 25px;
+    top: -5px;
+  }
+
   .latest_works_content_right, .latest_works_content_left {
     bottom: 30px;
   }

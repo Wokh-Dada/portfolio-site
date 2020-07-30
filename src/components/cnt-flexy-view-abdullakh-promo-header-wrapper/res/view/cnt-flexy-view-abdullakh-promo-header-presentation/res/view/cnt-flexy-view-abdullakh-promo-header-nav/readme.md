@@ -18,6 +18,8 @@
 | Event           | Description                  | Type               |
 | --------------- | ---------------------------- | ------------------ |
 | `clickOnHeader` | клик по элементам компонента | `CustomEvent<any>` |
+| `headerTheme`   | клик по элементам компонента | `CustomEvent<any>` |
+| `openForm`      | клик по элементам компонента | `CustomEvent<any>` |
 
 
 ## Dependencies

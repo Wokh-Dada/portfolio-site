@@ -3,6 +3,7 @@
   height: 100vh;
   transition: all .3s ease;
   overflow: hidden;
+  z-index: 10000;
 }
 
 .svgMouseEffect {
@@ -98,6 +99,7 @@
   animation-iteration-count: 1;
   animation-fill-mode: both;
   transform: translateX(0);
+  -webkit-transform: translateX(0);
   transition: transform .65s cubic-bezier(.694, .048, .335, 1);
   z-index: 60;
 }
@@ -174,12 +176,14 @@
   height: 2px;
   top: -3px;
   transform: rotate(-40deg);
+  -webkit-transform: rotate(40deg);
 }
 
 .link_go_to_next_block:hover .arrow-down::after {
   height: 2px;
   top: 3px;
   transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
 }
 
 @keyframes animationHead {
@@ -188,6 +192,7 @@
   }
   50% {
     transform: translateX(105%);
+    -webkit-transform: translateX(105%);
   }
   100% {
     position: initial;

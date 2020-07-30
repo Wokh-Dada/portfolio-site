@@ -39,9 +39,9 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   figureRight: HTMLElement;
 
   render() {
-
     return (
       <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el}>
+
         <div class="svgMouseEffect">
           <div class="svgGoLeft" ref={(el) => this.figureLeft = el}>
             {/**/}
@@ -187,6 +187,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
         <div class="icons_block">
           <Social arr={this.categories.socialIcon}/>
         </div>
+
         <div class="container h-100">
           <cnt-flexy-view-abdullakh-promo-header-nav headNav={this.categories.headNav}
                                                      social={this.categories.socialIcon}
@@ -245,7 +246,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   }
 
   componentDidLoad() {
-    this.headClass.addEventListener('mousemove', StartMatrix);
+    document.addEventListener('mousemove', StartMatrix);
 
     function StartMatrix(event) {
       const header = document.querySelector('header');
