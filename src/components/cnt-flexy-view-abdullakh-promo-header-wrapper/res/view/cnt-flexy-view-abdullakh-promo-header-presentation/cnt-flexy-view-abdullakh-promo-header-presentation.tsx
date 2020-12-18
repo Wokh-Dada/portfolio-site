@@ -40,8 +40,10 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
 
   render() {
     return (
-      <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el}>
-
+      <header class="header_backg_black" id="header_backg_black" ref={(el) => this.headClass = el} onMouseMove={()=> {
+        this.StartMatrix(event);
+        console.log(event)
+      }}>
         <div class="svgMouseEffect">
           <div class="svgGoLeft" ref={(el) => this.figureLeft = el}>
             {/**/}
@@ -187,12 +189,12 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
         <div class="icons_block">
           <Social arr={this.categories.socialIcon}/>
         </div>
-
         <div class="container h-100">
-          <cnt-flexy-view-abdullakh-promo-header-nav headNav={this.categories.headNav}
-                                                     social={this.categories.socialIcon}
-                                                     onOpenForm={() => this.openForm()}
-                                                     onHeaderTheme={(x) => this.headerTheme(x)}
+          <cnt-flexy-view-abdullakh-promo-header-nav
+            headNav={this.categories.headNav}
+            social={this.categories.socialIcon}
+            onOpenForm={() => this.openForm()}
+            onHeaderTheme={() => this.headerTheme()}
           />
           <div class="author_block">
             <div class="author_name_block">
@@ -218,8 +220,11 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
 
               </div>
               {
-                this.categories.btn.map((item) => <cnt-flexy-view-abdullakh-promo-animate-btn arr={item}
-                                                                                              onOpenForm={() => this.openForm()}/>)
+                this.categories.btn.map((item) =>
+                  <cnt-flexy-view-abdullakh-promo-animate-btn
+                    arr={item}
+                    onOpenForm={() => this.openForm()}
+                  />)
               }
             </div>
           </div>
@@ -227,10 +232,7 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
             this.popupComplited ? (
               <cnt-flexy-view-abdullakh-promo-about-me-section about={this.categories.formAboutMe}
                                                                onCloseForm={() => this.closeForm()}
-              />
-            ) : (
-              ""
-            )
+              />) : ("")
           }
         </div>
         <a href={this.categories.workHref} class="link_go_to_next_block"
@@ -246,17 +248,27 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   }
 
   componentDidLoad() {
-    document.addEventListener('mousemove', StartMatrix);
+    // document.addEventListener('mousemove', StartMatrix);
 
-    function StartMatrix(event) {
-      const header = document.querySelector('header');
-      const svgGoLeft = this.querySelector('.svgGoLeft');
-      const svgGoRight = this.querySelector('.svgGoRight');
-      const halfHeight = header.clientHeight / 2;
-      const halfWidth = header.clientWidth / 2;
-      svgGoLeft.style.transform = 'matrix(-1, 0, 0, -1,  ' + -(event.offsetY - halfHeight) / 20 + ',  '+ (event.offsetX - halfWidth) / 20 + ')';
-      svgGoRight.style.transform = 'matrix(-1, 0, 0, -1,  ' + (event.offsetY - halfHeight) / 20 + ',  '+ -(event.offsetX - halfWidth) / 20 + ')';
-    }
+    // function StartMatrix(event) {
+    //   const header = document.querySelector('header');
+    //   const svgGoLeft = this.querySelector('.svgGoLeft');
+    //   const svgGoRight = this.querySelector('.svgGoRight');
+    //   const halfHeight = header.clientHeight / 2;
+    //   const halfWidth = header.clientWidth / 2;
+    //   svgGoLeft.style.transform = 'matrix(-1, 0, 0, -1,  ' + -(event.offsetY - halfHeight) / 20 + ',  ' + (event.offsetX - halfWidth) / 20 + ')';
+    //   svgGoRight.style.transform = 'matrix(-1, 0, 0, -1,  ' + (event.offsetY - halfHeight) / 20 + ',  ' + -(event.offsetX - halfWidth) / 20 + ')';
+    // }
+  }
+
+  private StartMatrix(event) {
+    const header = document.querySelector('header');
+    const svgGoLeft = this.figureLeft;
+    const svgGoRight = this.figureRight;
+    const halfHeight = header.clientHeight / 2;
+    const halfWidth = header.clientWidth / 2;
+    svgGoLeft.style.transform = 'matrix(-1, 0, 0, -1,  ' + -(event.screenY - halfHeight) / 20 + ',  ' + (event.screenX - halfWidth) / 20 + ')';
+    svgGoRight.style.transform = 'matrix(-1, 0, 0, -1,  ' + (event.screenY - halfHeight) / 20 + ',  ' + -(event.screenX - halfWidth) / 20 + ')';
   }
 
   /**
@@ -278,15 +290,15 @@ export class CntFlexyViewAbdullakhPromoHeaderPresentation implements ComponentIn
   /**
    *
    */
-  public headerTheme(x) {
+  public headerTheme() {
     if (this.headClass.id === "header_backg_black") {
       return (
-        this.headClass.id = "header_backg_white",
-          x
+        this.headClass.id = "header_backg_white"
+        // x
       )
     } else {
-      return this.headClass.id = "header_backg_black",
-        x
+      return this.headClass.id = "header_backg_black"
+      // x
     }
   }
 

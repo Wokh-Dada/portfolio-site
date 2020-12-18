@@ -28,7 +28,10 @@ export class CntFlexyViewAbdullakhPromoHeaderWrapper implements ComponentInterfa
   render() {
     return (
       <div>
-        <cnt-flexy-view-abdullakh-promo-header-presentation categories={this.categories} onClickOnHeader={(event)=> this.clickOnHeader(event)}/>
+        <cnt-flexy-view-abdullakh-promo-header-presentation
+          categories={this.categories}
+          onClickOnHeader={(event)=> this.clickOnHeader(event)}
+        />
       </div>
     );
   }

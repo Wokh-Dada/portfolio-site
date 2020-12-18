@@ -3,17 +3,18 @@
   justify-content: center;
   align-items: center;
   height: 100%;
+  overflow: hidden;
 }
 
 .giga_text_contact{
-  bottom: -30px;
-  right: -200px;
-  color: #fff;
   font-size: 190px;
   position: absolute;
   opacity: .07;
   z-index: 0;
   font-weight: bold;
+  bottom: -30px;
+  right: -200px;
+  color: #4a4a4a;
 }
 
 .contact_form_wrapper_inner{

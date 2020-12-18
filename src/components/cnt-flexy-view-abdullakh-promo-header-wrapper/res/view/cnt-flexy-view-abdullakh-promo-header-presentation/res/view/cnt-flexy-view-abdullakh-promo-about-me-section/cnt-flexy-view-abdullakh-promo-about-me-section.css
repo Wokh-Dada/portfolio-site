@@ -3,6 +3,7 @@
   top: 5%;
   height: 90%;
   z-index: 60;
+  overflow: hidden;
 }
 
 .contact_form{
